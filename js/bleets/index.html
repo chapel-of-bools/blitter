@@ -1,8 +1,5 @@
-<h2>These are all the bleets</h2>
-
-<a data-ui-sref="bleetNew">New Bleet</a>
+<h2>Bleets <a data-ui-sref="bleetNew">(+)</a></h2>
 
 <div data-ng-repeat="bleet in BleetIndexViewModel.bleets | orderBy:'-created_at'">
-  <p><a data-ui-sref="bleetShow({id: bleet.id})">{{bleet.content}}</a></p>
-  <a data-ui-sref="bleetEdit({id: bleet.id})">Edit</a>
+  <p><a data-ui-sref="bleetShow({id: bleet.id})">{{bleet.content}}</a> <a data-ui-sref="bleetEdit({id: bleet.id})">(Edit)</a></p>
 </div>
